@@ -26,7 +26,7 @@ inquirer.prompt(questions).then(answers => {
     console.log(JSON.stringify(answers, null, '  '));
 });
 var createTableSQL = "create table user(phone varchar(15), password varchar(15))"
-var path = 'F:/study/wsl-my_note/2018_10/2018_10_12/1.db';
+var path = './1.db';
 // fs.exists(path, function (exists) {
 //   if (!exists) {
 //     getDB(path, function(err, db){
