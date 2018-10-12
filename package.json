@@ -1,0 +1,23 @@
+{
+  "name": "wsl-my_chat",
+  "version": "1.0.0",
+  "description": "wslchat",
+  "main": "register.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/suoling/wsl-my_chat.git"
+  },
+  "author": "wsl,yaoyuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suoling/wsl-my_chat/issues"
+  },
+  "homepage": "https://github.com/suoling/wsl-my_chat#readme",
+  "dependencies": {
+    "inquirer": "^6.2.0",
+    "sqlite3": "^4.0.2"
+  }
+}
