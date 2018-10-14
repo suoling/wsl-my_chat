@@ -17,7 +17,11 @@
   },
   "homepage": "https://github.com/suoling/wsl-my_chat#readme",
   "dependencies": {
+    "ejs": "^2.6.1",
     "inquirer": "^6.2.0",
+    "koa": "^2.5.3",
+    "koa-bodyparser": "^4.2.1",
+    "koa-router": "^7.4.0",
     "sqlite3": "^4.0.2"
   }
 }

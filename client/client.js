@@ -9,14 +9,59 @@
 var inquirer = require('inquirer')
 var questions = require('../const/const.js')
 
+var request = require('request');
+
+// var requestData={name: 'wsl', age: '25'};
+// request({
+//     url: url,
+//     method: 'POST',
+//     json: true,
+//     headers: {
+//         'content-type': 'application/json',
+//     },
+//     body: requestData
+// }, function(error, response, body) {
+//     if (!error && response.statusCode == 200) {
+//         console.log(body) // 请求成功的处理逻辑
+//     }
+// });
+
 inquirer.prompt(questions.ifLoginQuestion).then(ifLoginAnswers => {
   if (ifLoginAnswers.event === 'login') {
+    var url='http://localhost:3000/login';
     inquirer.prompt(questions.loginQuestion).then(loginAnswers => {
       console.log(loginAnswers)
+      request({
+        url: url,
+        method: 'POST',
+        json: true,
+        headers: {
+            'content-type': 'application/json',
+        },
+        body: loginAnswers
+      }, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body) // 请求成功的处理逻辑
+        }
+      });
     })
   } else if (ifLoginAnswers.event === 'register') {
+    var url='http://localhost:3000/register';
     inquirer.prompt(questions.registerQuestion).then(registerAnswers => {
       console.log(registerAnswers)
+      request({
+        url: url,
+        method: 'POST',
+        json: true,
+        headers: {
+            'content-type': 'application/json',
+        },
+        body: registerAnswers
+      }, function(error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body) // 请求成功的处理逻辑
+        }
+      });
     })
   }
   // console.log(JSON.stringify(answers, null, '  '));
