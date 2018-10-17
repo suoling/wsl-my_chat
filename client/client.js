@@ -14,7 +14,7 @@ var request = require('request');
 // var requestData={name: 'wsl', age: '25'};
 // request({
 //     url: url,
-//     method: 'POST',
+//     method: 'POST,
 //     json: true,
 //     headers: {
 //         'content-type': 'application/json',
