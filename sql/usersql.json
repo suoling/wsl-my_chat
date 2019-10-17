@@ -1,4 +1,4 @@
 {
-   "selectSQL": "select * from user where phone = '<%= phone %>' and password = '<%= password%>' ",
+   "selectSQL": "select * from user where phone = '<%= phone %>' and password = '<%= password %>' ",
    "insertSQL": "insert into user values('<%= id %>', '<%= phone %>','<%= password %>')"
 }
